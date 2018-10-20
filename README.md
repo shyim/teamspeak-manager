@@ -25,10 +25,6 @@ All configs and teamspeak-files will be saved in $HOME/.tsm
 tsm create TS1 9987 9987 101457
 ```
 
-´´´bash
-tsm create TS2 9988 9988 101458
-```
-
 ### Start / Stop / Restart / Delete
 
 ```bash
