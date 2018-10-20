@@ -1,0 +1,24 @@
+{
+  "name": "teamspeak-manager",
+  "version": "1.0.0",
+  "description": "Manage multiple teamspeak server instances on one host using Docker",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Shyim <s.sayakci@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shyim/teamspeak-manager/issues"
+  },
+  "bin": {
+    "tsm": "./index.js"
+  },
+  "homepage": "https://github.com/shyim/teamspeak-manager#readme",
+  "dependencies": {
+    "cli-table": "^0.3.1",
+    "dockerode": "^2.5.6",
+    "folder-delete": "^1.0.3",
+    "yargs": "^12.0.2"
+  }
+}
