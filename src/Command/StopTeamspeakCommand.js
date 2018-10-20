@@ -7,8 +7,8 @@ module.exports = function(argv) {
     container.stop()
         .then(() => {
             console.log(`Stopped teamspeak with name ${argv.name}`);
-        }).catch((err) => {
-            console.log(`Could not stop teamspeak with name ${argv.name}`);
-            console.log(err);
+        }).catch(err => {
+            console.error(`Could not stop teamspeak with name ${argv.name}`);
+            console.error(err);
         });
 };

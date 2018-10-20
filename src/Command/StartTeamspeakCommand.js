@@ -7,8 +7,8 @@ module.exports = function(argv) {
     container.start()
         .then(() => {
             console.log(`Started teamspeak with name ${argv.name}`);
-        }).catch((err) => {
-            console.log(`Could not start teamspeak with name ${argv.name}`);
-            console.log(err);
+        }).catch(err => {
+            console.error(`Could not start teamspeak with name ${argv.name}`);
+            console.error(err);
         });
 };
