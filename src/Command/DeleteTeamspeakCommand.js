@@ -20,11 +20,11 @@ module.exports = async function(argv) {
             try {
                 deleteFolder(`${global.path}/instances/${argv.name}`);
             } catch (e) {
-                console.log(`Could not delete instance data directory. Please delete it yourself (${global.path}/instances/${argv.name})`);
+                console.error(`Could not delete instance data directory. Please delete it yourself (${global.path}/instances/${argv.name})`);
             }
 
-        }).catch((err) => {
-            console.log(`Could not delete teamspeak instance with name ${argv.name}`);
-            console.log(err);
+        }).catch(err => {
+            console.error(`Could not delete teamspeak instance with name ${argv.name}`);
+            console.error(err);
         });
 };

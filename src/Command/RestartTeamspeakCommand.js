@@ -7,8 +7,8 @@ module.exports = function(argv) {
     container.restart()
         .then(() => {
             console.log(`Restarted teamspeak with name ${argv.name}`);
-        }).catch((err) => {
-            console.log(`Could not restart teamspeak with name ${argv.name}`);
-            console.log(err);
+        }).catch(err => {
+            console.error(`Could not restart teamspeak with name ${argv.name}`);
+            console.error(err);
         });
 };
