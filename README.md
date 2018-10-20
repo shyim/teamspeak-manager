@@ -22,17 +22,17 @@ All configs and teamspeak-files will be saved in $HOME/.tsm
 ### Create a new instance
 
 ```bash
-tsm create TS1 9987 9987 101457
+tsm create <name> <port> <server query port> <filemanager port>
 ```
 
 ### Start / Stop / Restart / Delete
 
 ```bash
-tsm start TS1
+tsm start <name>
 
-tsm stop TS1
+tsm stop <name>
 
-tsm restart TS1
+tsm restart <name>
 
-tsm delete TS1
+tsm delete <name>
 ```
