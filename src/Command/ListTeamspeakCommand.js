@@ -4,7 +4,7 @@ const Docker = require('../DockerClient');
 
 module.exports = () => {
     var table = new Table({
-        head: ['Name', 'Port', 'Running']
+        head: ['Name', 'Version', 'Port', 'Server-Query Port', 'Download Port', 'Running']
     });
 
     fs.readdir(global.path + '/configs', (err, result) => {
@@ -16,7 +16,10 @@ module.exports = () => {
 
                 table.push([
                     folder,
+                    config.version,
                     config.port,
+                    config.queryPort,
+                    config.downloadPort,
                     containers.indexOf(config.id) > -1 ? 'Yes' : 'No'
                 ])
             });

@@ -20,7 +20,7 @@ if (!fs.existsSync(global.path + '/configs/')) {
 yargs.version('0.0.1')
     .usage('tsm <cmd> [args]')
     .command('list', 'List all entries', () => {}, require('./src/Command/ListTeamspeakCommand'))
-    .command('create <name> <port> <queryPort> <downloadPort>', 'Create a new instance', (yargs) => {
+    .command('create <name> <port> <queryPort> <downloadPort> [tsversion]', 'Create a new instance', (yargs) => {
         yargs.positional('name', {
             type: 'string',
             default: null,
@@ -43,6 +43,13 @@ yargs.version('0.0.1')
             type: 'integer',
             default: null,
             describe: 'Filemanager Download Port'
+        });
+
+        yargs.positional('tsversion', {
+            type: 'string',
+            default: 'latest',
+            describe: 'Teamspeak Version',
+            required: false
         });
 
     }, require('./src/Command/CreateTeamspeakCommand'))
@@ -78,6 +85,14 @@ yargs.version('0.0.1')
         });
 
     }, require('./src/Command/DeleteTeamspeakCommand'))
+    .command('update <name>', 'Update a instance', (yargs) => {
+        yargs.positional('name', {
+            type: 'string',
+            default: null,
+            describe: 'Name'
+        });
+
+    }, require('./src/Command/UpdateTeamspeakCommand'))
     .demandCommand(1, 'You need at least one command before moving on')
     .help()
     .argv;

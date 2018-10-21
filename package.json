@@ -1,6 +1,6 @@
 {
   "name": "teamspeak-manager",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Manage multiple teamspeak server instances on one host using Docker",
   "main": "index.js",
   "scripts": {

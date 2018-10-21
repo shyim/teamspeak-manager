@@ -21,11 +21,13 @@ All configs and teamspeak-files will be saved in $HOME/.tsm
 
 ### Create a new instance
 
+In default all instances will be created with the latest version. If you want to select a version specify it on the 5 argument.
+
 ```bash
 tsm create <name> <port> <server query port> <filemanager port>
 ```
 
-### Start / Stop / Restart / Delete
+### Start / Stop / Restart / Delete / Update
 
 ```bash
 tsm start <name>
@@ -35,4 +37,6 @@ tsm stop <name>
 tsm restart <name>
 
 tsm delete <name>
+
+tsm update <name>
 ```
